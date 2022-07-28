@@ -18,11 +18,7 @@ namespace PlaceBooker.Application.Services.UserServices.AddUserService
             try
             {
                 string hashedPassword = _hasher.HashPassword(model.Password);
-<<<<<<< HEAD
                 Connection.sqlConnection.Query<AddUserDto>(UserCommands.AddUser, new
-=======
-                Connection.sqlConnection.Query<AddUserDto>(Commands.AddUser, new
->>>>>>> 620f3a630a660e15ae17791163d1d353003aa921
                 {
                     Username = model.Username,
                     Password = hashedPassword,

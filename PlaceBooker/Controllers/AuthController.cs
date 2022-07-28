@@ -23,11 +23,7 @@ namespace PlaceBooker.Controllers
 
 
         [HttpPost("SignUp")]
-<<<<<<< HEAD
         public IActionResult SignUp(SignUpUserVM model)
-=======
-        public IActionResult SignUp(SignUpUserViewModel model)
->>>>>>> 620f3a630a660e15ae17791163d1d353003aa921
         {
             if (!ModelState.IsValid)
             {
@@ -40,11 +36,7 @@ namespace PlaceBooker.Controllers
 
 
         [HttpPost("Login")]
-<<<<<<< HEAD
         public IActionResult Login(LoginUserVM model)
-=======
-        public IActionResult Login(LoginUserViewModel model)
->>>>>>> 620f3a630a660e15ae17791163d1d353003aa921
         {
             if (!ModelState.IsValid)
             {
@@ -71,10 +63,7 @@ namespace PlaceBooker.Controllers
                 RegisterDate = user.RegisterDate,
                 IsActive = user.IsActive,
                 Role = user.Role,
-<<<<<<< HEAD
                 Id = user.Id
-=======
->>>>>>> 620f3a630a660e15ae17791163d1d353003aa921
             });
             return Ok(token);
         }
