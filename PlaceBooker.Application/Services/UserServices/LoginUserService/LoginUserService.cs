@@ -50,11 +50,11 @@ namespace PlaceBooker.Application.Services.UserServices.LoginUserService
                 var claims = new[]
                 {
                     new Claim("Id" , model.Id.ToString() ),
-                    new Claim(ClaimTypes.NameIdentifier , model.Username),
-                    new Claim("RegisterDate" , model.RegisterDate.ToString()),
-                    new Claim("IsActive" , model.IsActive.ToString()),
-                    new Claim(ClaimTypes.Role , model.Role),
-                };
+                new Claim(ClaimTypes.NameIdentifier , model.Username),
+                new Claim("RegisterDate" , model.RegisterDate.ToString()),
+                new Claim("IsActive" , model.IsActive.ToString()),
+                new Claim(ClaimTypes.Role , model.Role),
+            };
 
                 var token = new JwtSecurityToken
                 (
