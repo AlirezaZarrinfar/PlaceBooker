@@ -1,5 +1,7 @@
 ﻿using PlaceBooker.Application.Services.PlaceServices.AddPlaceService;
 using PlaceBooker.Application.Services.PlaceServices.DeletePlaceService;
+using PlaceBooker.Application.Services.PlaceServices.GetPlacesService;
+using PlaceBooker.Application.Services.PlaceServices.UpdatePlaceService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +14,8 @@ namespace PlaceBooker.Application.UnitOfWork.PlaceUnitofwork
     {
         IAddPlaceService addPlaceService { get; }
         IDeletePlaceService deletePlaceService { get; }
+        IUpdatePlaceService updatePlaceService { get; }
+        IGetPlacesService getPlacesService { get; }
     }
     public class PlaceUnitofwork : IPlaceUnitofwork
     {
@@ -38,6 +42,32 @@ namespace PlaceBooker.Application.UnitOfWork.PlaceUnitofwork
                     _deletePlaceService = new DeletePlaceService();
                 }
                 return _deletePlaceService;
+            }
+        }
+
+        public IUpdatePlaceService _updatePlaceService;
+        public IUpdatePlaceService updatePlaceService
+        {
+            get
+            {
+                if (_updatePlaceService == null)
+                {
+                    _updatePlaceService = new UpdatePlaceService();
+                }
+                return _updatePlaceService;
+            }
+        }
+
+        public IGetPlacesService _getPlacesService;
+        public IGetPlacesService getPlacesService
+        {
+            get
+            {
+                if (_getPlacesService == null)
+                {
+                    _getPlacesService = new GetPlacesService();
+                }
+                return _getPlacesService;
             }
         }
     }

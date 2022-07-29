@@ -10,6 +10,7 @@ namespace PlaceBooker.Common.Commands
     {
         public static string AddPlace = "Insert Into [Place] Values (@Title , @Address , @Type , @Location , @DateCreated , @UserCreated)";
         public static string DeletePlace = "Delete From [Place] Where Id = @Id";
+        public static string UpdatePlace = "Update [Place] Set Title = @Title , Address = @Address , Type = @Type , Location = @Location , [DateCreated] = @DateCreated , [UserCreated] = @UserCreated Where Id = @Id";
 
     }
 }

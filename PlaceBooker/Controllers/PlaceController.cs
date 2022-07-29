@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PlaceBooker.Application.Services.PlaceServices.AddPlaceService;
+using PlaceBooker.Application.Services.PlaceServices.UpdatePlaceService;
 using PlaceBooker.Application.UnitOfWork.PlaceUnitofwork;
 using PlaceBooker.Common.ViewModels.PlaceViewModels;
 using System;
@@ -47,6 +48,35 @@ namespace PlaceBooker.Controllers
                 return BadRequest();
             }
             var res = _placeUnitofwork.deletePlaceService.DeletePlace(id);
+            return Ok(res);
+        }
+        [HttpPut]
+        public IActionResult UpdatePlace(UpdatePlaceVM model)
+        {
+            if (!ModelState.IsValid || model.UserCreated == 0 || model.Id == 0)
+            {
+                return BadRequest();
+            }
+            var res = _placeUnitofwork.updatePlaceService.UpdatePlace(new UpdatePlaceDto
+            {
+                Id = model.Id,
+                Title = model.Title,
+                Address = model.Address,
+                Type = model.Type,
+                Location = model.Location,
+                DateCreated = model.DateCreated,
+                UserCreated = model.UserCreated,
+            });
+            return Ok(res);
+        }
+        [HttpGet]
+        public IActionResult GetPlace(string? searchKey, int page)
+        {
+            var res = _placeUnitofwork.getPlacesService.GetPlaces(searchKey, page);
+            if(res.Count == 0)
+            {
+                return Ok("Data not found !!");
+            }
             return Ok(res);
         }
     }
