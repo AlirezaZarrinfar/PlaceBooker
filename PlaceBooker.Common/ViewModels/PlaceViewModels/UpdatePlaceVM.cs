@@ -23,5 +23,6 @@ namespace PlaceBooker.Common.ViewModels.PlaceViewModels
         public DateTime DateCreated { get; set; }
         [Required]
         public long UserCreated { get; set; }
+
     }
 }

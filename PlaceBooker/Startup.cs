@@ -10,6 +10,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using PlaceBooker.Application.UnitOfWork.BookUnitofwork;
 using PlaceBooker.Application.UnitOfWork.PlaceUnitofwork;
 using PlaceBooker.Application.UnitOfWork.UserUnitofwork;
 using System;
@@ -51,6 +52,7 @@ namespace PlaceBooker
 
             services.AddScoped<IUserUnitofwork, UserUnitofwork>();
             services.AddScoped<IPlaceUnitofwork, PlaceUnitofwork>();
+            services.AddScoped<IBookUnitofwork, BookUnitofwork>();
             services.AddScoped<IPasswordHasher, PasswordHasher>();
             services.AddControllers();
             services.AddSwaggerGen(c =>

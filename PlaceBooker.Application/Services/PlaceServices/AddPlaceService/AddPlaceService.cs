@@ -18,7 +18,7 @@ namespace PlaceBooker.Application.Services.PlaceServices.AddPlaceService
                     Type = model.Type,
                     Location = model.Location,
                     DateCreated = DateTime.Now,
-                    UserCreated = model.UserCreated
+                    UserCreated = model.UserCreated,
                 });
                 return true;
             }
