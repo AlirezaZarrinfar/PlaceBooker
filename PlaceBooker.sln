@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaceBooker", "PlaceBooker\PlaceBooker.csproj", "{11168AFD-3BC6-4F19-9DBC-1E3F6688D914}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlaceBooker", "PlaceBooker\PlaceBooker.csproj", "{11168AFD-3BC6-4F19-9DBC-1E3F6688D914}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaceBooker.Application", "PlaceBooker.Application\PlaceBooker.Application.csproj", "{06C96649-13E1-4F17-B0B2-DC2BB004417E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlaceBooker.Application", "PlaceBooker.Application\PlaceBooker.Application.csproj", "{06C96649-13E1-4F17-B0B2-DC2BB004417E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaceBooker.Persistance", "PlaceBooker.Persistance\PlaceBooker.Persistance.csproj", "{294B1ACA-25A9-4632-A62D-A80615F5A242}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlaceBooker.Persistance", "PlaceBooker.Persistance\PlaceBooker.Persistance.csproj", "{294B1ACA-25A9-4632-A62D-A80615F5A242}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaceBooker.Common", "PlaceBooker.Common\PlaceBooker.Common.csproj", "{6A1AD055-BC8F-49DE-9B76-10B09B6C9F53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PlaceBooker.Common", "PlaceBooker.Common\PlaceBooker.Common.csproj", "{6A1AD055-BC8F-49DE-9B76-10B09B6C9F53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlaceBooker.Test", "PlaceBooker.Test\PlaceBooker.Test.csproj", "{34D3FF4A-571E-4764-977F-A50419F9AFC0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{6A1AD055-BC8F-49DE-9B76-10B09B6C9F53}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A1AD055-BC8F-49DE-9B76-10B09B6C9F53}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A1AD055-BC8F-49DE-9B76-10B09B6C9F53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34D3FF4A-571E-4764-977F-A50419F9AFC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34D3FF4A-571E-4764-977F-A50419F9AFC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34D3FF4A-571E-4764-977F-A50419F9AFC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34D3FF4A-571E-4764-977F-A50419F9AFC0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
